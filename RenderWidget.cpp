@@ -95,7 +95,7 @@ void RenderWidget::paintEvent(QPaintEvent *)
   myDrawCircle(380,320,15,360);
 }
 
-
+//REFERENCE: https://stackoverflow.com/questions/10060046/drawing-lines-with-bresenhams-line-algorithm
 void RenderWidget::myDrawLine(float x1, float y1, float x2, float y2)
 {
   QPainter painter(this);
@@ -106,34 +106,72 @@ void RenderWidget::myDrawLine(float x1, float y1, float x2, float y2)
   QPen pen(Qt::black);
   pen.setWidth(4);
   painter.setPen(pen);
-  float m = (y2 - y1) / (x2 - x1);
-  //  SetPixel(x1, y1, color);   // first point
-  painter.drawPoint(x1, y1);
-
-  if (m < 1)
-  {
-    float y = y1;
-    for (int i = x1 + 1; i < x2; ++i)
-    {
-      y = y + m;
-      //      SetPixel(i, round(y), color);
-      painter.drawPoint(i, round(y));
+  //float m = (y2 - y1) / (x2 - x1);
+  int x,y,dx,dy,dx1,dy1,px,py,xe,ye,i;
+   dx=x2-x1;
+   dy=y2-y1;
+   dx1=fabs(dx);
+   dy1=fabs(dy);
+   px=2*dy1-dx1;
+   py=2*dx1-dy1;
+   if(dy1<=dx1) {
+    if(dx>=0) {
+     x=x1;
+     y=y1;
+     xe=x2;
     }
-  }
-  else     // i.e., m > 1
-  {
-    float mm = 1 / m;
-    float x = x1;
-    for (int i = y1 + 1; i < y2; ++i)
-    {
-      x = x + mm;
-      //      SetPixel(round(x), i, color);
-      painter.drawPoint(round(x), i);
+    else {
+     x=x2;
+     y=y2;
+     xe=x1;
     }
-  }
-
-  //  SetPixel(x2, y2, color);   // last point
-  painter.drawPoint(x2, y2);
+    painter.drawPoint(x, y);
+    for(i=0;x<xe;i++) {
+     x=x+1;
+     if(px<0) {
+      px=px+2*dy1;
+     }
+     else {
+      if((dx<0 && dy<0) || (dx>0 && dy>0)) {
+       y=y+1;
+      }
+      else {
+       y=y-1;
+      }
+      px=px+2*(dy1-dx1);
+     }
+     painter.drawPoint(x, y);
+    }
+   }
+   else {
+    if(dy>=0) {
+     x=x1;
+     y=y1;
+     ye=y2;
+    }
+    else {
+     x=x2;
+     y=y2;
+     ye=y1;
+    }
+    painter.drawPoint(x, y);
+    for(i=0;y<ye;i++) {
+     y=y+1;
+     if(py<=0) {
+      py=py+2*dx1;
+     }
+     else {
+      if((dx<0 && dy<0) || (dx>0 && dy>0)) {
+       x=x+1;
+      }
+      else {
+       x=x-1;
+      }
+      py=py+2*(dx1-dy1);
+     }
+     painter.drawPoint(x, y);
+    }
+   }
 }
 
 void RenderWidget::myDrawCircle(float Xc, float Yc, float r, float angle)
