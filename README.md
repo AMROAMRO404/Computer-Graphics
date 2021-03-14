@@ -1,4 +1,4 @@
 # Computer-Graphics
 
-
-![Screenshot](micro.PNG)
+## HW 1 
+![Screenshot](HW1/micro.PNG)
