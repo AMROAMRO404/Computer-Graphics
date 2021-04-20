@@ -1,0 +1,77 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.2"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PPUViewer",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "PPUViewer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PPUViewer-Debug-a12d8fe682971175b557.json",
+					"name" : "PPUViewer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "PPUViewer_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PPUViewer_autogen-Debug-de46d608cdc1861cf5b0.json",
+					"name" : "PPUViewer_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "PPUViewer_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PPUViewer_autogen_timestamp_deps-Debug-cf81c4045c1de33c65a0.json",
+					"name" : "PPUViewer_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Amro Amro/OneDrive/Desktop/university/Computer Graphics/PPUViewer2021/out/build/x64-Debug",
+		"source" : "C:/Users/Amro Amro/OneDrive/Desktop/university/Computer Graphics/PPUViewer2021"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

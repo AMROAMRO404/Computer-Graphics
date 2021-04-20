@@ -1,0 +1,5 @@
+C:/Users/Amro Amro/OneDrive/Desktop/university/Computer Graphics/PPUViewer2021/out/build/x64-Debug/CMakeFiles/PPUViewer.dir
+C:/Users/Amro Amro/OneDrive/Desktop/university/Computer Graphics/PPUViewer2021/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Amro Amro/OneDrive/Desktop/university/Computer Graphics/PPUViewer2021/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Amro Amro/OneDrive/Desktop/university/Computer Graphics/PPUViewer2021/out/build/x64-Debug/CMakeFiles/PPUViewer_autogen_timestamp_deps.dir
+C:/Users/Amro Amro/OneDrive/Desktop/university/Computer Graphics/PPUViewer2021/out/build/x64-Debug/CMakeFiles/PPUViewer_autogen.dir
