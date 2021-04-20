@@ -6,4 +6,4 @@
 
 ## HW 2
 
-![Screenshot](HW2/hw2.PNG)
+![Screenshot](HW2/HW2.PNG)
